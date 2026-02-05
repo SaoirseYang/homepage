@@ -7,17 +7,24 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
+            line-height: 1.6;
+            padding: 30px;
             background-color: #f4f4f4;
+            color: #333;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: auto;
             background: white;
             padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
         }
         img {
             width: 150px;
@@ -28,25 +35,97 @@
         }
         h1 {
             margin: 10px 0;
-            color: #333;
+            color: #2c3e50;
+        }
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 8px;
+            margin-top: 30px;
         }
         p {
-            color: #666;
+            color: #555;
+            margin-bottom: 15px;
         }
         a {
             color: #007bff;
             text-decoration: none;
         }
+        a:hover {
+            text-decoration: underline;
+        }
+        .contact {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        .publication {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #007bff;
+        }
+        .publication-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .publication-authors {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .publication-link {
+            font-size: 0.9em;
+        }
+        .bio {
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 替换【图片地址】为你的网络图片链接 -->
-        <img src="https://avatars.githubusercontent.com/u/109447673?v=4" alt="杨景雯的头像">
-        <h1>杨景雯</h1>
-        <p>欢迎来到我的个人主页</p>
-        <!-- 替换【你的邮箱】 -->
-        <p>联系我：<a href="mailto: 224040204@link.cuhk.edu.cn">224040204@link.cuhk.edu.cn</a></p>
+        <!-- 头部信息 -->
+        <div class="header">
+            <img src="https://avatars.githubusercontent.com/u/109447673?v=4" alt="杨景雯的头像">
+            <h1>杨景雯 (Jingwen Yang)</h1>
+            <p class="contact">联系我：<a href="mailto:224040204@link.cuhk.edu.cn">224040204@link.cuhk.edu.cn</a></p>
+        </div>
+
+        <!-- 个人简介 -->
+        <section class="bio">
+            <h2>个人简介</h2>
+            <p>杨景雯，香港中文大学（深圳）人工智能与机器人专业硕士研究生（2024.9–2027.6），本科毕业于北京交通大学计算机科学与技术专业。主要研究方向包括自然语言处理、语音生成与评估、大语言模型、强化学习、计算机视觉等。</p>
+            <p>具备丰富的算法研发与工程实践经验，主导或参与语音表现力评估框架（DeEAR）、儿童友好型语音对话大模型、LLM强化学习优化、行人检测算法改进等项目，并有多篇学术论文发表于arXiv及国际会议。曾在理想汽车、曙光信息产业、北京艾托邦人工智能等企业担任算法/数据相关实习职位。</p>
+        </section>
+
+        <!-- 论文发表 -->
+        <section class="publications">
+            <h2>论文发表</h2>
+            
+            <div class="publication">
+                <div class="publication-title">DeEAR: A Framework for Objective Evaluation of Speech Expressiveness Alignment with Human Preferences</div>
+                <div class="publication-authors">Zhiyu Lin, **Jingwen Yang**, Jiale Zhao, Meng Liu, Sunzhu Li, *Benyou Wang</div>
+                <div class="publication-link">arXiv: <a href="https://arxiv.org/abs/2510.20513" target="_blank">2510.20513</a></div>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">RubricHub: A Comprehensive and Highly Discriminative Rubric Dataset via Automated Coarse-to-Fine Generation</div>
+                <div class="publication-authors">Sunzhu Li, Jiale Zhao, Miteto Wei, Huimin Ren, Yang Zhou, **Jingwen Yang**, Shunyu Liu, Kaike Zhang, Wei Chen</div>
+                <div class="publication-link">arXiv: <a href="https://arxiv.org/abs/2601.08430" target="_blank">2601.08430</a></div>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">Breaking the Exploration Bottleneck: Rubric-Scaffolded Reinforcement Learning for General LLM Reasoning</div>
+                <div class="publication-authors">Yang Zhou, Sunzhu Li, Shunyu Liu, Wenkai Fang, Kongcheng Zhang, Jiale Zhao, **Jingwen Yang**, Yihe Zhou, Jianwei Lv, Tongya Zheng, Hengtong Lu, Wei Chen, Yan Xie, Mingli Song</div>
+                <div class="publication-link">arXiv: <a href="https://arxiv.org/abs/2508.16949" target="_blank">2508.16949</a></div>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">Research on Optimization of YOLOv3 Pedestrian Detection Algorithm</div>
+                <div class="publication-authors">**Jingwen Yang**, Qiaochu Zhao</div>
+                <div class="publication-link">DOI: <a href="https://doi.org/10.1109/AUTEEE56487.2022.9994311" target="_blank">10.1109/AUTEEE56487.2022.9994311</a></div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
